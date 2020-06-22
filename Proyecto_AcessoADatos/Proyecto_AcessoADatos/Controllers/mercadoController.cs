@@ -12,22 +12,22 @@ namespace Proyecto_AcessoADatos.Controllers
     {
 
         // GET: api/mercado
-        public mercadoDTO Get()
+        public List<mercadoDTO> Get()
         {
             //Devuelve un array de eventos en formato JSON
             var repo = new mercadoRepository();
             /*List<mercado> mercados = repo.Retrieve();*/
-            mercadoDTO d = repo.RetrieveDTO();
+            List<mercadoDTO> d = repo.RetrieveDTO();
             return d;
 
         }
 
         // GET: api/mercado/5
         [Authorize(Roles = "Admin")]
-        public mercado Get(int id)
+        public List<mercado> Get(int id)
         {
             var repo = new mercadoRepository();
-            mercado d = repo.Retrieve();
+            List<mercado> d = repo.Retrieve();
             return d;
         }
 

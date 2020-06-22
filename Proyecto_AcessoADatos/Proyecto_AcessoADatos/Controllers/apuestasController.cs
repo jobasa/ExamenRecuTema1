@@ -11,13 +11,13 @@ namespace Proyecto_AcessoADatos.Controllers
     public class apuestasController : ApiController
     {
         // GET: api/apuestas
-        [Authorize]
-        public apuestasDTO Get(string Email)
+        //[Authorize]
+        public List<apuestasDTO> Get(string Email)
         {
             //Devuelve un array de eventos en formato JSON
             var repo = new apuestasRepository();
             /*List<apuestas> apuesta = repo.Retrieve();*/
-            apuestasDTO apuesta = repo.RetrieveDTO();
+            List<apuestasDTO> apuesta = repo.RetrieveDTO();
             return apuesta;
         }
 
@@ -27,6 +27,15 @@ namespace Proyecto_AcessoADatos.Controllers
             var repo = new apuestasRepository();
             List<apuestas> a = repo.Retrieve();
             return a;
+        }
+
+
+        // GET: api/apuestasExamen
+        public List<apuestasExamen> GetExamen()
+        {
+            var repo = new apuestasRepository();
+            List<apuestasExamen> apuestas = repo.RetrieveExamen();
+            return apuestas;
         }
 
         // POST: api/apuestas

@@ -39,4 +39,22 @@ namespace Proyecto_AcessoADatos.Models
         public string Tipo_apuesta { get; set; }
 
     }
+
+    /*Ejercicio1 Examen*/
+    public class apuestasExamen
+    {
+        public apuestasExamen(string nombre, int ID_MERCADO, double Cuota, double Dinero_apostado)
+        {
+            this.nombre = nombre;
+            this.ID_MERCADO = ID_MERCADO;
+            this.Cuota = Cuota;
+            this.Dinero_apostado = Dinero_apostado;
+        }
+
+        public string nombre { get; set; }
+        public int ID_MERCADO { get; set; }
+        public double Cuota { get; set; }
+        public double Dinero_apostado { get; set; }
+    }
+    /* Fin Ejercicio1 Examen*/
 }
