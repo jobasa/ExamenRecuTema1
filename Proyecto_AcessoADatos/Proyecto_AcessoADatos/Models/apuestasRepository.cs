@@ -164,7 +164,7 @@ namespace Proyecto_AcessoADatos.Models
 
         }
 
-        /*Ejercicio1 Examen
+        /*Ejercicio
         internal List<apuestasExamen> RetrieveExamen()
         {
             apuestas a = null;
@@ -185,7 +185,7 @@ namespace Proyecto_AcessoADatos.Models
             return apuestasExamen;
 
         }*/
-        /* Fin Ejercicio1 Examen*/
+        /* Fin Ejercicio*/
 
     }
 }

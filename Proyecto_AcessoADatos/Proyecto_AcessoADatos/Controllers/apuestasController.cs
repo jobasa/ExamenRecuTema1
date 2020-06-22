@@ -29,6 +29,7 @@ namespace Proyecto_AcessoADatos.Controllers
             return a;
         }
 
+        /*Ejercicio1*/
         // GET: api/apuestas/1
         public List<apuestas> GetExamen(int id)
         {
@@ -36,6 +37,7 @@ namespace Proyecto_AcessoADatos.Controllers
             List<apuestas> a = repo.RetrieveExamen(id);
             return a;
         }
+        /* Fin Ejercicio1*/
 
         // GET: api/apuestasExamen
         /*public List<apuestasExamen> GetExamen()
