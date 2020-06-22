@@ -7,6 +7,7 @@ namespace Proyecto_AcessoADatos.Models
 {
     public class apuestas
     {
+        /*Ejercicio 1*/
         public apuestas(int Id, decimal Dinero_apostado, decimal Cuota, string Tipo_apuesta, int ID_MERCADO, int ID_USUARIOS)
         {
             this.Id = Id;
@@ -24,6 +25,9 @@ namespace Proyecto_AcessoADatos.Models
         public int ID_MERCADO { get; set; }
         public int ID_USUARIOS { get; set; }
     }
+    /* Fin Ejercicio 1*/
+
+    
 
     public class apuestasDTO
     {
@@ -40,10 +44,10 @@ namespace Proyecto_AcessoADatos.Models
 
     }
 
-    /*Ejercicio1 Examen*/
-    public class apuestasExamen
+    /*
+    public class apuestasPruebas
     {
-        public apuestasExamen(string nombre, int ID_MERCADO, double Cuota, double Dinero_apostado)
+        public apuestasPruebas(string nombre, int ID_MERCADO, double Cuota, double Dinero_apostado)
         {
             this.nombre = nombre;
             this.ID_MERCADO = ID_MERCADO;
@@ -55,6 +59,6 @@ namespace Proyecto_AcessoADatos.Models
         public int ID_MERCADO { get; set; }
         public double Cuota { get; set; }
         public double Dinero_apostado { get; set; }
-    }
-    /* Fin Ejercicio1 Examen*/
+    }*/
+    
 }

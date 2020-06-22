@@ -45,6 +45,33 @@ namespace Proyecto_AcessoADatos.Models
 
         }
 
+        /*Ejercicio 1*/
+        internal List<apuestas> RetrieveExamen(int id)
+        {
+            MySqlConnection con = Connect();
+            MySqlCommand command = con.CreateCommand();
+            command.CommandText = "select Id,Tipo_apuesta,Cuota,Dinero_apostado,ID_MERCADO,ID_USUARIOS from apuestas where ID_MERCADO =" + id;
+
+            con.Open();
+            MySqlDataReader res = command.ExecuteReader();
+
+            apuestas a = null;
+            List<apuestas> apuestaExamen = new List<apuestas>();
+
+            while (res.Read())
+            {
+                a = new apuestas(res.GetInt32(0),res.GetDecimal(1), res.GetDecimal(2), res.GetString(3), res.GetInt32(4), res.GetInt32(5));
+                apuestaExamen.Add(a);
+            }
+
+            con.Close();
+            return apuestaExamen;
+
+        }
+        /*Fin Ejercicio 1*/
+
+
+
         internal List<apuestasDTO> RetrieveDTO()
         {
             //Devuelve todos los registros
@@ -137,7 +164,7 @@ namespace Proyecto_AcessoADatos.Models
 
         }
 
-        /*Ejercicio1 Examen*/
+        /*Ejercicio1 Examen
         internal List<apuestasExamen> RetrieveExamen()
         {
             apuestas a = null;
@@ -157,7 +184,7 @@ namespace Proyecto_AcessoADatos.Models
             }
             return apuestasExamen;
 
-        }
+        }*/
         /* Fin Ejercicio1 Examen*/
 
     }

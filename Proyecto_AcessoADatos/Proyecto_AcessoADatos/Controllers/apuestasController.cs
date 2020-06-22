@@ -22,21 +22,28 @@ namespace Proyecto_AcessoADatos.Controllers
         }
 
         // GET: api/apuestas/5
-        public List<apuestas> Get(int id)
+        public List<apuestas> Get()
         {
             var repo = new apuestasRepository();
             List<apuestas> a = repo.Retrieve();
             return a;
         }
 
+        // GET: api/apuestas/1
+        public List<apuestas> GetExamen(int id)
+        {
+            var repo = new apuestasRepository();
+            List<apuestas> a = repo.RetrieveExamen(id);
+            return a;
+        }
 
         // GET: api/apuestasExamen
-        public List<apuestasExamen> GetExamen()
+        /*public List<apuestasExamen> GetExamen()
         {
             var repo = new apuestasRepository();
             List<apuestasExamen> apuestas = repo.RetrieveExamen();
             return apuestas;
-        }
+        }*/
 
         // POST: api/apuestas
         public void Post([FromBody]apuestas d)
